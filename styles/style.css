@@ -1,0 +1,80 @@
+/* typografie */
+body {
+    font-family: museo sans;
+}
+
+h1 {
+    font-family: museo sans;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: museo sans;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+header img {
+    height: 66px;
+    vertical-align: middle;
+}
+
+.filter {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background: #972582;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.filter input {
+    font-size: 4em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    padding-bottom: 30px;
+    font-size: 1em;
+    color: #972582;
+    justify-content: space-around;
+}
+
+article {
+    background: white;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+    min-height: 327px;
+}
+
+article img {
+    height: 12em;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+em {
+    position: relative;
+}
