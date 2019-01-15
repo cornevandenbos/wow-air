@@ -9,30 +9,32 @@
 </head>
 
 <body>
-    <!-- Header met filter, logo en search -->
+    <!-- Header: filter, logo en search -->
     <header>
         <button class="filterButton" id="filter"><img src="images/icon_filter.svg" alt="filter icon">Filter</button>
-        <form action="#" id="filterForm">
+        <form id="filterForm">
             <h2>Filter</h2>
-            <input type="checkbox" name="filter" value="Thriller" id="thriller"><label for="thriller">Thriller</label>
+            <button class="closeButton"><img src="images/icon_close.svg" alt="close"></button>
+            <input type="checkbox" name="filter" value="Thriller" id="thriller"><label id="t1" for="thriller">Thriller</label>
             <input type="checkbox" name="filter" value="Romantiek" id="romantiek"><label for="romantiek">Romantiek</label>
             <input type="checkbox" name="filter" value="Avontuur" id="avontuur"><label for="avontuur">Avontuur</label>
             <input type="checkbox" name="filter" value="Vrolijk" id="vrolijk"> <label for="vrolijk">Vrolijk</label>
             <input type="checkbox" name="filter" value="Boos" id="boos"><label for="boos">Boos</label>
             <input type="checkbox" name="filter" value="Kort" id="kort"><label for="kort">Kort</label>
             <input type="checkbox" name="filter" value="Lang" id="lang"><label for="lang">Lang</label>
-            <button>Go!</button>
+            <button class="submitFilter">Filters toepassen</button>
         </form>
-        <a href="#"><img src="images/logo.png" alt="logo"></a>
+        <a href="#"><img src="images/sitelogo.svg" alt="logo"></a>
         <button class="searchButton" id="search"><img src="images/icon_search.svg" alt="search icon"></button>
         <form action="#" id="searchForm">
             <h2>Zoeken</h2>
+            <a href="" class="closeButton"><img src="images/icon_close.svg" alt="close"></a>
             <input type="text" name="search" id="searchStyle" autocomplete="off" placeholder=" Zoek op verhaal of trefwoord">
             <button>Go!</button>
         </form>
     </header>
     <main>
-        <!-- Navigatie -->
+        <!-- Sorteersysteem -->
         <nav>
             <ul>
                 <li><a href="#">Trending</a></li>
@@ -42,30 +44,66 @@
         </nav>
         <!-- Verhalen -->
         <div class="articleList">
-        <article>
-            <a href="">
-                <img src="images/1.jpg" alt="">
-                <h2>Eric lucassen</h2>
-                <p>Thriller | avontuur</p>
-                <em>4,9</em>
-            </a>
-        </article>
-        <article>
-            <a href="">
-                <img src="images/2.jpg" alt="pic">
-                <h2>Zoon</h2>
-                <p>Romantiek</p>
-                <em>4,7</em>
-            </a>
-        </article>
-        <article>
-            <a href="">
-                <img src="images/3.jpg" alt="">
-                <h2>Eric lucassen</h2>
-                <p>Thriller</p>
-                <em>4,7</em>
-            </a>
-        </article>
+            <article>
+                <a href="ericlucassen.html">
+                    <img src="images/1.jpg" alt="">
+                    <section>
+                        <h2>Eric lucassen</h2>
+                        <em>4,9</em>
+                    </section>
+                    <p>Thriller | avontuur</p>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/2.jpg" alt="pic">
+                    <section>
+                        <h2>Zoon</h2>
+                        <em>4,7</em>
+                    </section>
+                    <p>Romantiek</p>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/3.jpg" alt="">
+                    <section>
+                        <h2>Eric lucassen</h2>
+                        <em>4,7</em>
+                    </section>
+                    <p>Thriller</p>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/1.jpg" alt="">
+                    <section>
+                        <h2>Eric lucassen</h2>
+                        <em>4,9</em>
+                    </section>
+                    <p>Thriller | avontuur</p>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/2.jpg" alt="pic">
+                    <section>
+                        <h2>Zoon</h2>
+                        <em>4,7</em>
+                    </section>
+                    <p>Romantiek</p>
+                </a>
+            </article>
+            <article>
+                <a href="">
+                    <img src="images/3.jpg" alt="">
+                    <section>
+                        <h2>Eric lucassen</h2>
+                        <em>4,7</em>
+                    </section>
+                    <p>Thriller</p>
+                </a>
+            </article>
         </div>
     </main>
     <script src="js/script.js"></script>
