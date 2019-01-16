@@ -10,7 +10,7 @@ body {
 h1 {
     font-family: museo sans;
     font-weight: 900;
-    text-align: center;
+    color:#972582;
 }
 
 h2 {
@@ -35,6 +35,20 @@ a:visited {
     text-decoration: none;
 }
 
+/* Zerostate */
+
+.zero{
+  background: #972582;
+  color: white;
+  padding: 0.8em;
+  margin-top: 2em;
+}
+
+.download{
+  padding-left: 1em;
+}
+
+
 /* Header */
 header {
     background-color: white;
@@ -55,7 +69,7 @@ header {
 
 @keyframes slidein-top {
   from {
-    margin-top: -4%;
+    margin-top: -20%;
   }
   to {
     margin-top: 0%;
@@ -67,10 +81,7 @@ header img {
     vertical-align: middle;
 }
 
-header a{
-    display: block;
-    margin: auto;
-}
+
 
 header form {
     margin: 0;
@@ -141,14 +152,14 @@ header > button > img {
 
 .closeButton{
     position: absolute;
-    top: 3.1em;
+    top: 2.2em;
     right: 1.5em;
     background: none;
     border: none;
 }
 
 .closeButton img{
-    height: 2em;
+    height: 20px;
 }
 
 .submitFilter{
@@ -224,10 +235,13 @@ button.searchButton {
 }
 
 /* Header for detail page */
+#headerDetail{
+      justify-content: center;
+      align-items: center;
+}
+
 #headerLogo{
-      position: absolute;
-      left: 47%;
-      top: 0.5em;
+  padding-top: 1.2em;
 }
 
 #closeDetail{
@@ -249,6 +263,7 @@ ul {
     color: #972582;
     justify-content: space-between;
     padding: 0;
+    animation: slidein-article 1.2s ease-out;
 }
 
 /* verhalen */
@@ -258,6 +273,16 @@ article {
     margin-bottom: 5vw;
     min-height: 30vw;
     text-decoration: none;
+    animation: slidein-article 1.2s ease-out;
+}
+
+@keyframes slidein-article {
+  from {
+    margin-top: -8%;
+  }
+  to {
+    margin-top: 0%;
+  }
 }
 
 article img {
@@ -304,12 +329,13 @@ span{
 #verhaal{
    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
    background-blend-mode: multiply;
-   padding: 0.8em;
+   padding: 1em;
+   animation: slidein-article 1.2s ease-out;
 }
 
 #verhaal > p{
   font-size: 1em;
-  margin: 2em;
+  margin: 1.5em;
   color: white;
 }
 
@@ -916,6 +942,10 @@ span{
           height: 20vw;
       }
 
+      #verhaal{
+        padding: 8em;
+      }
+
       #verhaal > P{
         font-size: 1.6em;
       }
@@ -940,8 +970,13 @@ span{
           height: 18vw;
       }
 
+      #verhaal{
+        padding: 8em;
+      }
+
       #verhaal > P{
         font-size: 2em;
+
       }
 
 }
