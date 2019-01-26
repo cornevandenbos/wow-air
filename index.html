@@ -6,6 +6,9 @@
     <title>Wow air</title>
     <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="styles/jquery-ui.css">
 </head>
 
 <body>
@@ -14,32 +17,32 @@
         <button class="filterButton" id="filter"><img src="images/icon_filter.svg" alt="filter icon">Filter</button>
         <form id="filterForm">
             <h2>Filter</h2>
-            <a href="index.html" class="closeButton"><img src="images/icon_close.svg" alt="close"></a>
-            <input type="checkbox" name="filter" value="Thriller" id="thriller"><label id="t1" for="thriller">Thriller</label>
-            <input type="checkbox" name="filter" value="Romantiek" id="romantiek"><label for="romantiek">Romantiek</label>
-            <input type="checkbox" name="filter" value="Avontuur" id="avontuur"><label for="avontuur">Avontuur</label>
-            <input type="checkbox" name="filter" value="Vrolijk" id="vrolijk"> <label for="vrolijk">Vrolijk</label>
-            <input type="checkbox" name="filter" value="Boos" id="boos"><label for="boos">Boos</label>
-            <input type="checkbox" name="filter" value="Kort" id="kort"><label for="kort">Kort</label>
-            <input type="checkbox" name="filter" value="Lang" id="lang"><label for="lang">Lang</label>
-            <button class="submitFilter">Filters toepassen</button>
+                <a href="index.html" class="closeButton"><img src="images/icon_close.svg" alt="close"></a>
+                <input type="checkbox" name="filter" value="Thriller" id="thriller"><label id="t1" for="thriller">Thriller</label>
+                <input type="checkbox" name="filter" value="Romantiek" id="romantiek"><label for="romantiek">Romantiek</label>
+                <input type="checkbox" name="filter" value="Avontuur" id="avontuur"><label for="avontuur">Avontuur</label>
+                <input type="checkbox" name="filter" value="Vrolijk" id="vrolijk"> <label for="vrolijk">Vrolijk</label>
+                <input type="checkbox" name="filter" value="Boos" id="boos"><label for="boos">Boos</label>
+                <input type="checkbox" name="filter" value="Kort" id="kort"><label for="kort">Kort</label>
+                <input type="checkbox" name="filter" value="Lang" id="lang"><label for="lang">Lang</label>
+                <button class="submitFilter">Filters toepassen</button>
         </form>
         <a href="#"><img src="images/sitelogo.svg" alt="logo"></a>
         <button class="searchButton" id="search"><img src="images/icon_search.svg" alt="search icon"></button>
         <form action="#" id="searchForm">
             <h2>Zoeken</h2>
             <a href="index.html" class="closeButton"><img src="images/icon_close.svg" alt="close"></a>
-            <input type="text" name="search" id="searchStyle" autocomplete="off" placeholder=" Zoek op verhaal of trefwoord">
+            <input type="text" name="search" id="searchStyle" class="tags" placeholder=" Zoek op verhaal of trefwoord">
             <button>Go!</button>
         </form>
     </header>
     <main>
         <!-- Sorteersysteem -->
         <nav>
-            <ul>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Aanbevolen</a></li>
-                <li><a href="#">Random</a></li>
+            <ul class="nav">
+                <li><a href="index.html" class="highlight">Trending</a></li>
+                <li><a href="aanbevolen.html">Aanbevolen</a></li>
+                <li><a href="random.html">Random</a></li>
             </ul>
         </nav>
         <!-- Verhalen -->

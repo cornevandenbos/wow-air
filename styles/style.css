@@ -1,5 +1,5 @@
 /* typografie */
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 
 body {
     margin-top: 8em;
@@ -18,12 +18,22 @@ h2 {
     font-weight: 100;
     font-size: 2em;
     color: #2b3940;
+    margin: 0;
+}
+
+h3 {
+    font-family: museo sans;
+    font-size: 1.3em;
+    font-weight: 900;
+    color:#972582;
 }
 
 p {
     font-weight: 300;
     font-size: 1em;
     color: #2b3940;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 a {
@@ -89,8 +99,10 @@ header form {
 
 form h2 {
     color: #fff;
+    margin-top: 1em;
     font-weight: 900;
     text-align: center;
+    margin-bottom: 1em;
 }
 
 /* Filter */
@@ -116,7 +128,8 @@ form h2 {
 }
 
 #filterForm label {
-    color: darkgrey;
+    color: white;
+    opacity: 0.4;
     font-size: 1.5em;
     padding: 0.5em;
     display: flex;
@@ -133,6 +146,11 @@ form h2 {
     color: white;
     font-size: 1.8em;
     font-weight: 500;
+    opacity: 1;
+}
+
+#filterForm input:hover + label {
+    opacity: 0.9;
 }
 
 button.filterButton {
@@ -152,10 +170,11 @@ header > button > img {
 
 .closeButton{
     position: absolute;
-    top: 2.2em;
+    top: 2.5em;
     right: 1.5em;
     background: none;
     border: none;
+    transition: opacity .6s 0s cubic-bezier(.19, 1, .22, 1);
 }
 
 .closeButton img{
@@ -165,13 +184,13 @@ header > button > img {
 .submitFilter{
   background-color: white;
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 700;
   color: #972582;
   text-transform: none;
   display: flex;
   text-align: center;
   margin-top: 2em;
-  padding: 0.3em;
+  padding: 0.5em;
   border-radius: 4px;
 }
 
@@ -213,14 +232,14 @@ button.searchButton {
     background: #972582;
     border: 0;
     border-bottom: 2px solid #fff;
-    text-decoration: none;
     font-size: 1em;
     width: 65%;
     height: 5%;
     padding-left: 0.8em;
     padding-right: 0.8em;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 1.2em;
+    font-family: museo sans;
+    font-weight: 300;
     color: white;
     outline: 0;
 }
@@ -260,25 +279,35 @@ ul {
     margin-top: 8em;
     margin-bottom: 2em;
     font-size: 1em;
-    color: #972582;
     justify-content: space-between;
     padding: 0;
     animation: slidein-article 1.2s ease-out;
+}
+
+ .nav :hover{
+  font-weight: 700;
+  color: #972582;
+  animation: .3s ease-out;
+}
+
+.highlight{
+    font-weight: 700;
+    color: #972582;
 }
 
 /* verhalen */
 article {
     background: white;
     border: 1px solid #999;
-    margin-bottom: 5vw;
-    min-height: 30vw;
+    margin-bottom: 1.8em;
+    min-height: 10vw;
     text-decoration: none;
     animation: slidein-article 1.2s ease-out;
 }
 
 @keyframes slidein-article {
   from {
-    margin-top: -8%;
+    margin-top: -4%;
   }
   to {
     margin-top: 0%;
@@ -292,35 +321,38 @@ article img {
     object-position: center center;
 }
 
-
 article a {
     text-decoration: none;
 }
 
 article p {
-    margin-left: 2vw
+    margin-left: 1em;
+    margin-top: 0;
 }
 
 article section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 2vw;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
 
 }
 
 em {
+    padding-top: 0.3em;
     font-size: 2.2em;
     color: #972582;
-    margin-right: 2vw;
     border-bottom: 5px solid #FFDF5D;
-
 }
 
 /* Verhaal */
 span{
   font-size: 1.4em;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Luckiest Guy', cursive;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -331,6 +363,7 @@ span{
    background-blend-mode: multiply;
    padding: 1em;
    animation: slidein-article 1.2s ease-out;
+   margin-bottom: 2em;
 }
 
 #verhaal > p{
@@ -339,6 +372,33 @@ span{
   color: white;
 }
 
+.rating{
+  margin-bottom: 2em;
+}
+
+.rating label{
+  font-size: 2em;
+  margin-right: 1em;
+  color: grey;
+  border-bottom: 5px solid transparant;
+}
+
+.rating label:hover{
+  color: #972582;
+  border-bottom: 5px solid #FFDF5D;
+  transition: all .5s ease-out;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating input:checked + label{
+  color: #972582;
+  font-size: 3em;
+  border-bottom: 5px solid #FFDF5D;
+  transition: all .5s ease-out;
+}
 
 /* shake animation Bron: https://csshake.surge.sh/ */
 .shake {
@@ -929,6 +989,11 @@ span{
 /* media queuries */
 @media (min-width: 768px)
    {
+      ul{
+          margin-left: 3em;
+          margin-right: 3em;
+      }
+
       .articleList{
           display: flex;
           min-width: 675px;
@@ -937,6 +1002,7 @@ span{
       }
       article{
           max-width: 48%;
+          margin-bottom: 2.7em;
       }
       article img {
           height: 20vw;
@@ -954,6 +1020,10 @@ span{
 
 @media (min-width: 1280px)
    {
+     ul{
+         margin-left: 15em;
+         margin-right: 15em;
+     }
       .articleList{
           display: flex;
           min-width: 1136px;
@@ -963,7 +1033,7 @@ span{
       }
       article{
           max-width: 32%;
-
+          margin-bottom: 1.5em;
       }
 
       article img {

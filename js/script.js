@@ -14,6 +14,8 @@ function showFilter() {
 
 filterButton.addEventListener('click', showFilter);
 
+
+
 // Show search on click
 
 var searchButton = document.getElementById('search');
@@ -25,3 +27,40 @@ function showSearch() {
 }
 
 searchButton.addEventListener('click', showSearch);
+
+
+// Autocomplete
+$( function() {
+  var availableTags = [
+    "Notitie",
+    "Essentie",
+    "Geert Wilders",
+    "Verrast",
+    "Verhalend",
+    "Eric Lucassen",
+    "Verliefd",
+    "Droom",
+    "Mop",
+    "Lepra",
+    "Eenzaam",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme",
+    "Woordenrally",
+    "Twitter",
+    "Hyperbool",
+    "Regenboog"
+
+  ];
+  $( ".tags" ).autocomplete({
+    source: availableTags
+  });
+} );
